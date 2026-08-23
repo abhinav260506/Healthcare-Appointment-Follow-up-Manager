@@ -2,6 +2,8 @@
 
 A secure full-stack healthcare platform featuring multi-role portals (Patient, Doctor, Admin), RFC 6238 TOTP MFA, concurrent double-booking protection, offline/online LLM clinical triage, asynchronous email/calendar delivery, and prescription medication reminders.
 
+🔗 **Live Hosted Application:** [HealthCare Platform - Appointment & Follow-up Manager](https://healthcare-appointment-follow-up-ma-taupe.vercel.app/)
+
 ---
 
 ## 🚀 Key Features
