@@ -1,7 +1,11 @@
 import axios from 'axios';
 import { User, Doctor, Appointment, TimeSlot, PreVisitSummary, PostVisitSummary, MedicationReminder, EmailLog, RedisMetrics, LeaveRequest } from '../types';
 
-const API_BASE = import.meta.env.VITE_API_URL || '/api';
+let rawBase = import.meta.env.VITE_API_URL || '/api';
+if (rawBase.startsWith('http') && !rawBase.endsWith('/api') && !rawBase.includes('/api')) {
+  rawBase = rawBase.replace(/\/+$/, '') + '/api';
+}
+const API_BASE = rawBase;
 
 const api = axios.create({
   baseURL: API_BASE,

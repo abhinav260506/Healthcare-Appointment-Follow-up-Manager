@@ -32,12 +32,21 @@ app.get('/api/health', (req, res) => {
   });
 });
 
-// API Routes
+// API Routes (Mounted on both /api/* and root /* for seamless proxy compatibility)
 app.use('/api/auth', authRoutes);
+app.use('/auth', authRoutes);
+
 app.use('/api/doctors', doctorRoutes);
+app.use('/doctors', doctorRoutes);
+
 app.use('/api/appointments', appointmentRoutes);
+app.use('/appointments', appointmentRoutes);
+
 app.use('/api/consultations', consultationRoutes);
+app.use('/consultations', consultationRoutes);
+
 app.use('/api/system', systemRoutes);
+app.use('/system', systemRoutes);
 
 // Global Error Handler
 app.use((err, req, res, next) => {
