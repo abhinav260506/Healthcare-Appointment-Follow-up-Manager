@@ -5,7 +5,8 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "build": "echo 'Backend ready'"
   },
   "dependencies": {
     "@google/generative-ai": "^0.24.0",
